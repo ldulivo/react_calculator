@@ -15,7 +15,6 @@
     font-size: 55px;
     border-radius: 10px;
     place-items: center;
-    //border-color: transparent;
 
     &::before {
       content: "";
@@ -46,6 +45,10 @@
 
     &:active {
       filter: brightness(1.5);
+
+      &::before {
+        transform: translate(5px, 5px);
+      }
     }
   }
 
