@@ -1,0 +1,97 @@
+.numbers {
+  button {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+      inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+      10px 20px 25px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    margin: 8px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 55px;
+    border-radius: 10px;
+    place-items: center;
+    //border-color: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 4px;
+      bottom: 14px;
+      right: 12px;
+      background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+      border-radius: 10px;
+      box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+        10px 5px 10px rgba(0, 0, 0, 0.15);
+      border-left: 1px solid #0004;
+      border-bottom: 1px solid #0004;
+      border-top: 1px solid #0009;
+    }
+
+    p {
+      position: relative;
+      font-style: normal;
+      width: 100%;
+      height: 100%;
+
+      &:active {
+        transform: translate(5px, 5px);
+      }
+    }
+
+    &:active {
+      filter: brightness(1.5);
+    }
+  }
+
+  .clear {
+    background: #f00;
+    border-color: #d20000 #323232 #323232 #d20000;
+
+    p {
+      &:active {
+        transform: translate(3px, 3px);
+      }
+    }
+
+    &::before {
+      background: linear-gradient(90deg, #d20000, #ffffff5c);
+      border-left: 1px solid #fff4;
+      border-bottom: 1px solid #fff4;
+      border-top: 1px solid #fff4;
+    }
+
+    &:active {
+      filter: brightness(1.1);
+      border-color: #323232 #d20000 #d20000 #323232;
+    }
+  }
+
+  .op {
+    background: #2196f3;
+    border-color: #1f91eb #323232 #323232 #1f91eb;
+
+    p {
+      &:active {
+        transform: translate(3px, 3px);
+      }
+    }
+
+    &::before {
+      background: linear-gradient(90deg, #1479c9, #ffffff5c);
+      border-left: 1px solid #fff4;
+      border-bottom: 1px solid #fff4;
+      border-top: 1px solid #fff4;
+    }
+
+    &:active {
+      filter: brightness(1.1);
+      border-color: #323232 #1f91eb #1f91eb #323232;
+    }
+  }
+}

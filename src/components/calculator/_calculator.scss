@@ -1,0 +1,34 @@
+.calculator {
+  position: relative;
+  display: grid;
+
+  .content {
+    display: grid;
+    grid-gap: 7px;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .calculator_1 {
+    display: grid;
+    grid-template-columns: repeat(1, 88px);
+    grid-template-rows: repeat(3, 88px);
+    grid-gap: 7px;
+  }
+
+  .calculator_3 {
+    display: grid;
+    grid-template-columns: repeat(3, 88px);
+    grid-template-rows: repeat(1, 88px);
+    grid-gap: 7px;
+  }
+
+  .span2_row {
+    grid-row: span 2;
+    height: 186px;
+  }
+
+  .span2_col {
+    grid-column: span 2;
+    width: 186px;
+  }
+}
