@@ -1,15 +1,40 @@
-input {
-  position: relative;
-  height: 60px;
-  left: 10px;
-  width: 374px;
-  border: none;
-  outline: none;
-  background: #fff;
+.total {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   margin-bottom: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
-  text-align: right;
-  padding: 10px;
-  font-size: 2em;
+  width: 374px;
+  position: relative;
+  left: 10px;
+
+  input {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #fff;
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.75);
+  }
+
+  .accrued {
+    font-size: 1.3em;
+    height: 50px;
+    opacity: 0.9;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+
+    overflow-x: scroll;
+
+    scroll-snap-type: x mandatory;
+
+    /* hide scrollbar */
+    -ms-overflow-style: none; /* Internet Explorer, Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

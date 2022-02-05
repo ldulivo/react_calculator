@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Total = () => {
+const Total = ({ totalValue, accrued }) => {
   return (
       <div className="total">
-          <input type="number" readOnly/>
+          <input type="text" readOnly className='accrued' value={accrued} />
+          <input type="text" readOnly value={totalValue}/>
       </div>
   );
 };

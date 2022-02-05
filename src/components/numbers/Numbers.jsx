@@ -1,17 +1,22 @@
 import React from 'react';
 
-const Numbers = ({ val, classCalc="" }) => {
+const Numbers = ({ val, classCalc="", pressKey }) => {
+    
+    let classButton;
+    ( !isNaN(val) )
+        ? classButton = ''
+        : ( val === 'C' )
+            ? classButton ='clear'
+            : classButton ='op'
 
   return (
-      <div className={`numbers ${classCalc}`}>
-          {
-              ( !isNaN(val) )
-                ? <button><p>{val}</p></button>
-                : ( val === "C" ) 
-                    ? <button className='clear'><p>{val}</p></button>
-                    : <button className="op"><p>{val}</p></button>
-          }
-      </div>
+    <div className={`numbers ${classCalc}`}>
+        <button className={classButton}>
+            <p onClick={() => pressKey(val)}>
+                {val}
+            </p>
+        </button>
+    </div>
   );
 };
 
