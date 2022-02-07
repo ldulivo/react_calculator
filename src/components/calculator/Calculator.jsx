@@ -2,64 +2,22 @@ import React, { useState } from 'react';
 import Numbers from '../numbers/Numbers';
 import Total from '../total/Total';
 
+import MathCalc from '../../helpers/math';
+
+const mathCalc = new MathCalc();
+
 const Calculator = () => {
     const [totalValue, setTotalValue] = useState("0");
-    const [decimal, setDecimal] = useState(false);
-    const [accrued, setAccrued] = useState("0");
 
     const pressKey = (k) => {
-        if ( accrued === "0" ) return( setAccrued( `${k}` ) );
-
-        switch (k) {
-            case "C":
-                setTotalValue("0");
-                setAccrued("0");
-                setDecimal(false);
-                break;
-            
-            case "/":
-                console.log("dividido");
-                break;
-
-            case "*":
-                console.log("producto");
-                break;
-            
-            case "-":
-                setAccrued( `${accrued} - ` );
-                break;
-            
-            case "+":
-                setAccrued( `${accrued} + ` );
-                break;
-
-            case "=":
-                const re = /[-+]/;
-                //const total = accrued.split(" ").join("")
-                //const total = accrued.split("+").join()
-                //total = accrued.split("-").join()
-                const total = accrued.split(re).join()
-                console.log( total );
-                setTotalValue(total.trim())
-                break;
-            
-            case ".":
-                if ( !decimal ) {
-                    setAccrued( `${accrued}.` );
-                    setDecimal(true);
-                }
-                break;
         
-            default:
-                setAccrued(`${accrued}${k}`)
-                break;
-        }
+        setTotalValue( mathCalc.KeyPress(k) );
     }
 
   return (
     <div className='calculator'>
 
-        <Total totalValue={ totalValue } accrued={ accrued }/>
+        <Total totalValue={ totalValue } />
 
         <div className='content'>
             <section>
