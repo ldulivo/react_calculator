@@ -11,8 +11,8 @@ This project is created with the ReactJs framework.
 JavaScript
 Sass (CSS)
 
-![](https://ldulivo.github.io/ldulivo/img/icons/html_5.png)
-![](https://ldulivo.github.io/ldulivo/img/icons/css.png)
-![](https://ldulivo.github.io/ldulivo/img/icons/sass_48.png)
-![](https://ldulivo.github.io/ldulivo/img/icons/javascript_48.png)
-![](https://ldulivo.github.io/ldulivo/img/icons/reactjs.png)
+![](https://ldulivo.github.io/ldulivo/img/icons/icons8-html-5-48.png)
+![](https://ldulivo.github.io/ldulivo/img/icons/icons8-css3-48.png)
+![](https://ldulivo.github.io/ldulivo/img/icons/icons8-sass-48.png)
+![](https://ldulivo.github.io/ldulivo/img/icons/icons8-javascript-48.png)
+![](https://ldulivo.github.io/ldulivo/img/icons/icons8-react-native-48.png)
