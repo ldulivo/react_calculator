@@ -8,8 +8,9 @@ This project is created with the ReactJs framework.
 
 ## Technologies such as:
 
-JavaScript
-Sass (CSS)
+- JavaScript
+- Sass (CSS)
+- HTML 5
 
 ![](https://ldulivo.github.io/ldulivo/img/icons/icons8-html-5-48.png)
 ![](https://ldulivo.github.io/ldulivo/img/icons/icons8-css3-48.png)
